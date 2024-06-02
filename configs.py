@@ -30,14 +30,14 @@ else:
     URL = "http://{}/".format(FQDN)
 UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
 BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001987654567")).split())) 
-STREAM_LOGS = environ.get('STREAM_LOGS','-1001895607162')
+STREAM_LOGS = environ.get('STREAM_LOGS','-1002178887238')
 SESSION = environ.get('SESSION','MissRozy')
 CUSTOM_CAPTION = environ.get('CUSTOM_CAPTION')
 
 
 class Config(object):
-	API_ID = int(os.environ.get("API_ID", 13323016))
-	API_HASH = os.environ.get("API_HASH", "13323016")
+	API_ID = int(os.environ.get("API_ID", 27972068))
+	API_HASH = os.environ.get("API_HASH", "6e7e2f5cdddba536b8e603b3155223c1")
 	BOT_TOKEN = os.environ.get("BOT_TOKEN","6144687436:AAGShuVn551CQHCWjRkdoBIteGgV0SUWxBo")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME" , "MissRozy_BOT")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", -1001772120203))
