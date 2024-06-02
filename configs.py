@@ -13,7 +13,7 @@ if 'DYNO' in environ:
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','hh') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://{}:{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
@@ -41,14 +41,14 @@ class Config(object):
 	BOT_TOKEN = os.environ.get("BOT_TOKEN","6144687436:AAGShuVn551CQHCWjRkdoBIteGgV0SUWxBo")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME" , "Hell King Manager")
 	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", -1001772120203))
-	BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
+	BOT_OWNER = int(os.environ.get("BOT_OWNER", "6075512585"))
 	DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://subhadeepsamui79:v3REnnLOfITn2p8t@cluster0.4z3invg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1001765107260")
+	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "0")
 	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1002178887238")
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "0").split())
 	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
-	LAZY_CHANNEL = int(os.environ.get('LAZY_CHANNEL',''))
+	LAZY_CHANNEL = int(os.environ.get('LAZY_CHANNEL','-1002150715003'))
 	LAZY_MODE = bool(os.environ.get("LAZY_MODE", False))
 	LAZY_PIC = os.environ.get("LAZY_PIC","https://telegra.ph/file/d382d2fad1fdd2a4ccca4.png")
 	LP_BTN_MAIN_CH_USRNM = os.environ.get("LP_BTN_MAIN_CH_USRNM")
